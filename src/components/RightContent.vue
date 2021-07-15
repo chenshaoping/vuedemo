@@ -1,21 +1,29 @@
 <template>
     <div class="right-content" :style="{width:open?'85%':'100%'}">
-        <p>
+        <!-- <p>
             this is test english ,show right content
+            {{count}}
         </p>
         <DxButton
             text="Click me"
             type="success"
-        ></DxButton>
+            @click="clickBtn"
+        ></DxButton> -->
+        <ProductViewList></ProductViewList>
+        <ProductInfo />
     </div>
 </template>
 
 <script>
-import DxButton from 'devextreme-vue/button';
+// import DxButton from 'devextreme-vue/button';
+import ProductViewList from './ProductViewList.vue';
+import ProductInfo from './ProductInfo.vue';
 export default {
     name:'RightContent',
     components:{
-        DxButton
+        // DxButton,
+        ProductViewList,
+        ProductInfo
     },
     props:{
         open:{
@@ -23,11 +31,22 @@ export default {
             default:false
         },
     },
+    computed:{
+         count () {
+            return this.$store.state.count
+        }
+    },
     data() {
             return {
                 
             }
     },
+    methods:{
+        clickBtn(e){
+            console.log("eeeeee",e);
+            this.$store.commit('increment')
+        }
+    }
 }
 </script>
 

@@ -75,7 +75,7 @@ export default {
 }
 </script>
 
-<style >
+<style scoped>
     .left-contnet-temp{
         width:15%;
         height:100%;
