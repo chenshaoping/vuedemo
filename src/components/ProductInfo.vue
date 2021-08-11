@@ -13,6 +13,29 @@
                         <div class="product-desc-text">
                             <span>rfid手机OTG读卡器USB通讯UHF超高频便携手持小精灵Type-c读写器</span>
                         </div>
+                        <div class="product-price">
+                            <div class="product-price-label">价格</div>
+                            <div  class="product-price-amt">￥799.00 - 817.00</div>
+                            <div class="product-price-comment">
+                                <div>23</div>
+                                <div>累计评论</div>
+                            </div>
+                            <div class="product-price-dill">
+                                <div>-</div>
+                                <div>交易成功</div>
+                            </div>
+                        </div>
+                        <div class="product-color">
+                            <div class="product-color-label">颜色分类</div>
+                            <div class="product-color-list">
+                                <div class="product-color-img">
+                                    <img src='../assets/imgs/huawei.jpg'  />
+                                </div>
+                                <div class="product-color-img">
+                                    <img src='../assets/imgs/huawei.jpg'  />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -45,6 +68,7 @@
     width: 100%;
     /* display: flex; */
     /* flex-direction: column; */
+    min-width: 1020px;
 }
 .product-info-show{
     width: 100%;
@@ -75,6 +99,7 @@
 .product-desc{
     float: left;
     width: 50%;
+    min-width: 400px;
 }
 .similar-product{
     float: left;
@@ -93,5 +118,81 @@
 .similar-item img{
     height: 100%;
     width: 100%;
+}
+.product-price{
+    width:100%;
+    background-color: rgb(245, 225, 218);
+    padding: 5px;
+}
+.product-desc-text{
+    font-size: 15px;
+    font-weight:bold;
+}
+.product-price > div{
+   display: inline-block;
+   height:45px;
+}
+
+.product-price-label{
+    height: 30px !important;
+    width:50px;
+    vertical-align: middle;
+    /* padding-top: 5px; */
+    color: gray;
+}
+.product-price-amt{
+    width:230px;
+    color: orangered;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 45px;
+}
+.product-price-comment{
+    width:80px;
+    text-align: center;
+     color: gray;
+}
+.product-price-dill{
+    width:80px;
+    text-align: center;
+     color: gray;
+}
+@media screen and (max-width:1291px){
+    .product-price-comment{
+        display: none !important;
+    }
+    .product-price-dill{
+        display: none !important;
+    }
+}
+.product-color{
+    padding: 10px 5px 5px 5px;
+}
+.product-color-label{
+    width:60px;
+    height:45px;
+    color: gray;
+    display: inline-block;
+    vertical-align: top;
+}
+.product-color-list{
+    max-width: 300px;
+    display: inline-block;
+}
+.product-color-img{
+    width:45px;
+    height:45px;
+    text-align: center;
+    vertical-align: center;
+    border:2px #eeeeee solid;
+    padding : 2px;
+}
+.product-color-img:hover{
+    border:2px #F40 solid;
+}
+.product-color-img > img{
+    width: 98%;
+    height:98%;
+    border:2px solid transparent;
 }
 </style>

@@ -102,7 +102,7 @@
         top: 50px;
         border: 1px #c3c6ca solid;
         border-radius: 5px;
-        background-color: #a4c8ef8a;
+        background-color: #92bfef;
         transition: height .5s;
         outline: 0;
     }
