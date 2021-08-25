@@ -177,7 +177,7 @@
 }
 .product-color-list{
     max-width: 300px;
-    display: inline-block;
+    display: inline-flex;
 }
 .product-color-img{
     width:45px;
