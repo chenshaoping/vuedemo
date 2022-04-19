@@ -3,7 +3,7 @@
         <div class="product-title">手機列表</div>
         <div class="product-item" v-for="prod in productList" :key="prod.id">
             <div class="prod-img">
-                <img :src="prod.imgUrl">
+                <img :src="getImg(prod.imgUrl)">
             </div>
              <div class="prod-msg">
                  <div>{{prod.name}}</div>
@@ -52,6 +52,11 @@
         data(){
             return {
                
+            }
+        },
+        methods:{
+            getImg(img){
+                return require('@/assets/imgs/'+img)
             }
         }
     }

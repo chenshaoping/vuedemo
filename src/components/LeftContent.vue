@@ -37,12 +37,17 @@ export default {
         }
     },
     mounted(){
-        axios.post('http://10.33.9.64:8000/vue/getTreesPost',{
-            "ptyid":"123456",
-            "unitid":"234354"
-        }).then(res=>{
+        // axios.post('http://10.33.9.64:8000/vue/getTreesPost',{
+        //     "ptyid":"123456",
+        //     "unitid":"234354"
+        // }).then(res=>{
+        //     console.log("res",res)
+        //     this.menuData = res.data.data;
+        //     this.currItem = this.menuData[0];
+        // })
+        axios.get('../data/tree.json',).then(res=>{
             console.log("res",res)
-            this.menuData = res.data.data;
+            this.menuData = res.data;
             this.currItem = this.menuData[0];
         })
     },
